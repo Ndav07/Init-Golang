@@ -1,4 +1,4 @@
-package usecase
+package calculate_price
 
 import (
 	"ql/first-steps/internal/order/entity"
@@ -9,9 +9,9 @@ type CalculateFinalPriceUseCase struct {
 	OrderRepository database.OrderRepositoryInterface
 }
 
-func NewCalculateFinalPriceUseCase(orderRepository database.OrderRepository) *CalculateFinalPriceUseCase {
+func NewCalculateFinalPriceUseCase(orderRepository database.OrderRepositoryInterface) *CalculateFinalPriceUseCase {
 	return &CalculateFinalPriceUseCase{
-		OrderRepository: &orderRepository,
+		OrderRepository: orderRepository,
 	}
 }
 

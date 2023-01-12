@@ -1,4 +1,4 @@
-package usecase
+package calculate_price
 
 type OrderOutputDTO struct {
 	ID string

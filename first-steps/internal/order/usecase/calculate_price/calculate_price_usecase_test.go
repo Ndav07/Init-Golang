@@ -1,4 +1,4 @@
-package usecase
+package calculate_price
 
 import (
 	"database/sql"
@@ -12,7 +12,7 @@ import (
 
 type CalculateFinalPriceUseCaseTestSuite struct {
 	suite.Suite
-	OrderRepository database.OrderRepository
+	OrderRepository database.OrderRepositoryInterface
 	Db *sql.DB
 }
 
@@ -21,7 +21,7 @@ func (suite *CalculateFinalPriceUseCaseTestSuite) SetupSuite() {
 	suite.NoError(err)
 	db.Exec("CREATE TABLE orders (id varchar(255) NOT NULL, price float NOT NULL, tax float NOT NULL, final_price float NOT NULL, PRIMARY KEY (id))")
 	suite.Db = db
-	suite.OrderRepository = *database.NewOrderRepository(db)
+	suite.OrderRepository = database.NewOrderRepository(db)
 }
 
 func (suite *CalculateFinalPriceUseCaseTestSuite) TearDownTest() {
