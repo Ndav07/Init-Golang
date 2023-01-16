@@ -8,7 +8,7 @@ type Opps struct {
 	Message string `json:"message"`
 	Err string `json:"error"`
 	Code int	`json:"code"`
-	Causes []Causes `json:"causes,omitempy"`
+	Causes []Causes `json:"causes,omitempty"`
 }
 
 type Causes struct {
