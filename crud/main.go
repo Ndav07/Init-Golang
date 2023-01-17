@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"os"
+	"ql/crud/src/configuration/logger"
 	"ql/crud/src/controller/routes"
 
 	"github.com/gin-gonic/gin"
@@ -10,6 +11,7 @@ import (
 )
 
 func main() {
+	logger.Info("About to start user app")
 	godotenv.Load()
 	port := os.Getenv("PORT")
 	router := gin.Default()
