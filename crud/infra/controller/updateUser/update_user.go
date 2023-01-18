@@ -1,4 +1,4 @@
-package controller
+package updateUser
 
 import "github.com/gin-gonic/gin"
 

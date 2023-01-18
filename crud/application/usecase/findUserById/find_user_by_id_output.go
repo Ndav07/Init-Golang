@@ -1,6 +1,6 @@
-package response
+package findUser
 
-type UserResponse struct {
+type FindUserOutput struct {
 	ID string `json:"id"`
 	Email string `json:"email"`
 	Name string	`json:"name"`

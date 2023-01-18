@@ -1,4 +1,4 @@
-package controller
+package deleteUser
 
 import "github.com/gin-gonic/gin"
 

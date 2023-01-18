@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 	"os"
-	"ql/crud/src/configuration/logger"
-	"ql/crud/src/controller/routes"
+	"ql/crud/config/logger"
+	"ql/crud/infra/routes"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"

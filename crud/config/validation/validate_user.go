@@ -3,7 +3,7 @@ package validation
 import (
 	"encoding/json"
 	"errors"
-	"ql/crud/src/configuration/opps"
+	"ql/crud/config/opps"
 
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-playground/locales/en"
